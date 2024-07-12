@@ -9,6 +9,13 @@
       name="description"
       content="ESG Criteria Rankings Dashboard"
     />
+<script>
+  const path = localStorage.getItem('path');
+  if (path) {
+    localStorage.removeItem('path');
+    window.history.replaceState(null, null, path);
+  }
+</script>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>ESG Dashboard</title>
   </head>
